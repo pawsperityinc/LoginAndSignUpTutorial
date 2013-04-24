@@ -14,7 +14,7 @@
 #pragma mark - UIViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
     
     if ([PFUser currentUser]) {
         // If the user is logged in, show their name in the welcome label.

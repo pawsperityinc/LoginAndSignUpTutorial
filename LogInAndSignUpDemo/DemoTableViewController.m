@@ -30,6 +30,7 @@ typedef enum {
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     self.title = NSLocalizedString(@"Sign Up and Log In Demo", nil);
 }
 

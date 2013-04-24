@@ -14,7 +14,7 @@
 #pragma mark - UIViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
     if ([PFUser currentUser]) {
         self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
     } else {
