@@ -3,21 +3,50 @@
 //  LogInAndSignUpDemo
 //
 //  Created by Mattieu Gamache-Asselin on 6/14/12.
-//  Copyright (c) 2012 Parse. All rights reserved.
+//  Copyright (c) 2013 Parse. All rights reserved.
 //
 
 #import "PropertyConfigViewController.h"
 
 @implementation PropertyConfigViewController
 
-@synthesize welcomeLabel;
+
+#pragma mark - UIViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewDidLoad];
+    
     if ([PFUser currentUser]) {
-        [welcomeLabel setText:[NSString stringWithFormat:@"Welcome %@!",[[PFUser currentUser] username]]];
+        // If the user is logged in, show their name in the welcome label.
+        
+        if ([PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
+            // If user is linked to Twitter, we'll use their Twitter screen name
+            self.welcomeLabel.text =[NSString stringWithFormat:NSLocalizedString(@"Welcome @%@!", nil), [PFTwitterUtils twitter].screenName];
+
+        } else if ([PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+            // If user is linked to Facebook, we'll use the Facebook Graph API to fetch their full name. But first, show a generic Welcome label.
+            self.welcomeLabel.text =[NSString stringWithFormat:NSLocalizedString(@"Welcome!", nil)];
+            
+            // Create Facebook Request for user's details
+            FBRequest *request = [FBRequest requestForMe];
+            [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                // This is an asynchronous method. When Facebook responds, if there are no errors, we'll update the Welcome label.
+                if (!error) {
+                    NSString *displayName = result[@"name"];
+                    if (displayName) {
+                        self.welcomeLabel.text =[NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), displayName];
+                    }
+                }
+            }];
+        
+        } else {
+            // If user is linked to neither, let's use their username for the Welcome label.
+            self.welcomeLabel.text =[NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [PFUser currentUser].username];
+        
+        }
+        
     } else {
-        [welcomeLabel setText:@"Not logged in"];
+        self.welcomeLabel.text = NSLocalizedString(@"Not logged in", nil);
     }
 }
 
@@ -25,12 +54,14 @@
     [super viewDidAppear:animated];
     
     // Check if user is logged in
-    if (![PFUser currentUser]) {      
-        // Customize the Log In View Controller
+    if (![PFUser currentUser]) {
+        // If not logged in, we will show a PFLogInViewController
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-        [logInViewController setDelegate:self];
-        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", nil]];
-        [logInViewController setFields: PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsDismissButton];
+
+        // Customize the Log In View Controller
+        logInViewController.delegate = self;
+        logInViewController.facebookPermissions = @[@"friends_about_me"];
+        logInViewController.fields = PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsDismissButton; // Show Twitter login, Facebook login, and a Dismiss button.
         
         // Present Log In View Controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
@@ -56,7 +87,7 @@
 }
 
 
-#pragma mark - Logout button handler
+#pragma mark - ()
 
 - (IBAction)logOutButtonTapAction:(id)sender {
     [PFUser logOut];

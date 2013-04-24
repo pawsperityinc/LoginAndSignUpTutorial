@@ -3,21 +3,22 @@
 //  LogInAndSignUpDemo
 //
 //  Created by Mattieu Gamache-Asselin on 6/14/12.
-//  Copyright (c) 2012 Parse. All rights reserved.
+//  Copyright (c) 2013 Parse. All rights reserved.
 //
 
 #import "DefaultSettingsViewController.h"
 
 @implementation DefaultSettingsViewController
 
-@synthesize welcomeLabel;
+
+#pragma mark - UIViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewDidLoad];
     if ([PFUser currentUser]) {
-        [welcomeLabel setText:[NSString stringWithFormat:@"Welcome %@!", [[PFUser currentUser] username]]];
+        self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
     } else {
-        [welcomeLabel setText:@"Not logged in"];
+        self.welcomeLabel.text = NSLocalizedString(@"Not logged in", nil);
     }
 }
 
@@ -52,7 +53,7 @@
         return YES; // Begin login process
     }
     
-    [[[UIAlertView alloc] initWithTitle:@"Missing Information" message:@"Make sure you fill out all of the information!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
     return NO; // Interrupt login process
 }
 
@@ -89,7 +90,7 @@
     
     // Display an alert if a field wasn't completed
     if (!informationComplete) {
-        [[[UIAlertView alloc] initWithTitle:@"Missing Information" message:@"Make sure you fill out all of the information!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
     }
     
     return informationComplete;
@@ -111,7 +112,7 @@
 }
 
 
-#pragma mark - Logout button handler
+#pragma mark - ()
 
 - (IBAction)logOutButtonTapAction:(id)sender {
     [PFUser logOut];

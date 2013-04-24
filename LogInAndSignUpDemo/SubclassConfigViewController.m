@@ -3,7 +3,7 @@
 //  LogInAndSignUpDemo
 //
 //  Created by Mattieu Gamache-Asselin on 6/15/12.
-//  Copyright (c) 2012 Parse. All rights reserved.
+//  Copyright (c) 2013 Parse. All rights reserved.
 //
 
 #import "SubclassConfigViewController.h"
@@ -12,14 +12,15 @@
 
 @implementation SubclassConfigViewController
 
-@synthesize welcomeLabel;
+
+#pragma mark - UIViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewDidLoad];
     if ([PFUser currentUser]) {
-        [welcomeLabel setText:[NSString stringWithFormat:@"Welcome %@!",[[PFUser currentUser] username]]];
+        self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
     } else {
-        [welcomeLabel setText:@"Not logged in"];
+        self.welcomeLabel.text = NSLocalizedString(@"Not logged in", nil);
     }
 }
 
@@ -30,28 +31,21 @@
     if (![PFUser currentUser]) {        
         // Customize the Log In View Controller
         MyLogInViewController *logInViewController = [[MyLogInViewController alloc] init];
-        [logInViewController setDelegate:self];
-        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", nil]];
-        [logInViewController setFields:PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton];
+        logInViewController.delegate = self;
+        logInViewController.facebookPermissions = @[@"friends_about_me"];
+        logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
         
         // Customize the Sign Up View Controller
         MySignUpViewController *signUpViewController = [[MySignUpViewController alloc] init];
-        [signUpViewController setDelegate:self];
-        [signUpViewController setFields:PFSignUpFieldsDefault | PFSignUpFieldsAdditional];
-        [logInViewController setSignUpController:signUpViewController];
+        signUpViewController.delegate = self;
+        signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
+        logInViewController.signUpController = signUpViewController;
         
         // Present Log In View Controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
     }
 }
 
-
-#pragma mark - Logout button handler
-
-- (IBAction)logOutButtonTapAction:(id)sender {
-    [PFUser logOut];
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 #pragma mark - PFLogInViewControllerDelegate
 
@@ -61,7 +55,7 @@
         return YES;
     }
     
-    [[[UIAlertView alloc] initWithTitle:@"Missing Information" message:@"Make sure you fill out all of the information!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
     return NO;
 }
 
@@ -95,7 +89,7 @@
     }
     
     if (!informationComplete) {
-        [[[UIAlertView alloc] initWithTitle:@"Missing Information" message:@"Make sure you fill out all of the information!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
     }
     
     return informationComplete;
@@ -116,5 +110,12 @@
     NSLog(@"User dismissed the signUpViewController");
 }
 
+
+#pragma mark - ()
+
+- (IBAction)logOutButtonTapAction:(id)sender {
+    [PFUser logOut];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

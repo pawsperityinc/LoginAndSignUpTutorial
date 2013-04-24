@@ -3,7 +3,7 @@
 //  LogInAndSignUpDemo
 //
 //  Created by Mattieu Gamache-Asselin on 6/14/12.
-//  Copyright (c) 2012 Parse. All rights reserved.
+//  Copyright (c) 2013 Parse. All rights reserved.
 //
 
 #import "DemoTableViewController.h"
@@ -26,12 +26,15 @@ typedef enum {
 
 @implementation DemoTableViewController
 
+
+#pragma mark - UIViewController
+
 - (void)viewDidLoad {
-    self.title = @"Sign Up and Log In Demo";
+    self.title = NSLocalizedString(@"Sign Up and Log In Demo", nil);
 }
 
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
@@ -55,7 +58,7 @@ typedef enum {
 }
 
 
-#pragma mark - Table view delegate
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
@@ -73,17 +76,17 @@ typedef enum {
     NSString *cellText = nil;
     switch (indexPath.row) {
         case DemoTableViewRowDefaultSettings:
-            cellText = @"Using the Defaults";
+            cellText = NSLocalizedString(@"Using the Defaults", nil);
             break;
         case DemoTableViewRowCustomProperties:
-            cellText = @"Property Customization";
+            cellText = NSLocalizedString(@"Property Customization", nil);
             break;
         case DemoTableViewRowCustomSubclasses:
-            cellText = @"Subclass Customization";
+            cellText = NSLocalizedString(@"Subclass Customization", nil);
             break;
         case DemoTableViewNumberOfRows: // never reached.
         default:
-            cellText = @"Unknown";
+            cellText = NSLocalizedString(@"Unknown", nil);
             break;
     }
 	return cellText;
@@ -93,17 +96,17 @@ typedef enum {
     NSString *cellText = nil;
     switch (indexPath.row) {
         case DemoTableViewRowDefaultSettings:
-            cellText = @"An example of using the controllers with no customization";
+            cellText = NSLocalizedString(@"An example of using the controllers with no customization", nil);
             break;
         case DemoTableViewRowCustomProperties:
-            cellText = @"An example of customizing the controllers using the available properties";
+            cellText = NSLocalizedString(@"An example of customizing the controllers using the available properties", nil);
             break;
         case DemoTableViewRowCustomSubclasses:
-            cellText = @"An example of customizing the controllers using subclasses";
+            cellText = NSLocalizedString(@"An example of customizing the controllers using subclasses", nil);
             break;
         case DemoTableViewNumberOfRows: // never reached.
         default:
-            cellText = @"Unknown";
+            cellText = NSLocalizedString(@"Unknown", nil);
             break;
     }
 	return cellText;  
