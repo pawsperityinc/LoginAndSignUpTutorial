@@ -3,6 +3,7 @@
 //  LogInAndSignUpDemo
 //
 //  Created by Mattieu Gamache-Asselin on 6/15/12.
+//  Copyright (c) 2013 Parse. All rights reserved.
 //
 
 #import "SubclassConfigViewController.h"
@@ -70,7 +71,7 @@
 
 // Sent to the delegate when the log in screen is dismissed.
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
-    [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"User dismissed the logInViewController");
 }
 
 
