@@ -14,12 +14,15 @@
 #pragma mark - UIViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    
     if ([PFUser currentUser]) {
-        self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
+        self.navigationItem.title = [NSString stringWithFormat:@"Welcome %@!", [[PFUser currentUser] username]];
     } else {
-        self.welcomeLabel.text = NSLocalizedString(@"Not logged in", nil);
+        self.navigationItem.title = @"Not logged in";
     }
+    
+    [super viewWillAppear:animated];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -37,8 +40,26 @@
         // Assign our sign up controller to be displayed from the login controller
         [logInViewController setSignUpController:signUpViewController]; 
         
+        logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsLogInButton;
+        
         // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
+        
+        
+    } else
+    {
+        PFQuery *queryForTimesheet = [[PFQuery alloc] initWithClassName:@"Timesheet"];
+        [queryForTimesheet whereKey:@"volunteerUser" equalTo:[PFUser currentUser]];
+        [queryForTimesheet whereKeyDoesNotExist:@"clockedOut"];
+        NSInteger number = [queryForTimesheet countObjects];
+        if (number > 0)
+        {
+            [self.clockButton setTitle:@"Clock Out" forState:UIControlStateNormal];
+            self->clockedIn = YES;
+        } else {
+            [self.clockButton setTitle:@"Clock In" forState:UIControlStateNormal];
+            self->clockedIn = NO;
+        }
     }
     
 }
@@ -116,7 +137,53 @@
 
 - (IBAction)logOutButtonTapAction:(id)sender {
     [PFUser logOut];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self viewDidAppear:YES];
+}
+
+- (IBAction)clockInOrOut:(id)sender
+{
+    if (self->clockedIn) {
+        
+        [self clockOut];
+ self->clockedIn = NO;
+}   else {
+
+        [self clockIn];
+    self->clockedIn = YES;
+}
+}
+
+- (void) clockIn
+{
+    PFObject *timesheet = [PFObject objectWithClassName:@"Timesheet"];
+    [timesheet setObject:[[NSDate alloc] init] forKey:@"clockedIn"];
+    [timesheet setObject:[PFUser currentUser] forKey:@"volunteerUser"];
+    [timesheet saveEventually];
+    NSLog(@"%@",timesheet);
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Clocked In" message:[NSString stringWithFormat:@"%@",[[NSDate alloc] init]] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alertView show];
+    
+    
+    [self.clockButton setTitle:@"Clock Out" forState:UIControlStateNormal];
+
+}
+
+- (void) clockOut
+{
+    PFQuery *queryForTimesheet = [[PFQuery alloc] initWithClassName:@"Timesheet"];
+    [queryForTimesheet whereKey:@"volunteerUser" equalTo:[PFUser currentUser]];
+    [queryForTimesheet whereKeyDoesNotExist:@"clockedOut"];
+    PFObject *timesheet = [queryForTimesheet getFirstObject];
+    [timesheet setObject:[[NSDate alloc] init] forKey:@"clockedOut"];
+    [timesheet saveEventually];
+    NSLog(@"%@",timesheet);
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Clocked Out" message:[NSString stringWithFormat:@"%@",[[NSDate alloc] init]] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alertView show];
+    
+    
+    [self.clockButton setTitle:@"Clock In" forState:UIControlStateNormal];
 }
 
 @end

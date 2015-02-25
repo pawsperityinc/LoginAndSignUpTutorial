@@ -9,6 +9,32 @@
 /* Begin PBXBuildFile section */
 		143C2CDD18203DBB00DFCD05 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143C2CDC18203DBB00DFCD05 /* Parse.framework */; };
 		143C2CDF182058B900DFCD05 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143C2CDE182058B900DFCD05 /* FacebookSDK.framework */; };
+		285A6D261A9DC79700001041 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A6D251A9DC79700001041 /* main.m */; };
+		285A6D291A9DC79700001041 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A6D281A9DC79700001041 /* AppDelegate.m */; };
+		285A6D2C1A9DC79700001041 /* Paws_For_Pawsperity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 285A6D2A1A9DC79700001041 /* Paws_For_Pawsperity.xcdatamodeld */; };
+		285A6D2F1A9DC79700001041 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A6D2E1A9DC79700001041 /* ViewController.m */; };
+		285A6D321A9DC79700001041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285A6D301A9DC79700001041 /* Main.storyboard */; };
+		285A6D341A9DC79700001041 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285A6D331A9DC79700001041 /* Images.xcassets */; };
+		285A6D371A9DC79700001041 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285A6D351A9DC79700001041 /* LaunchScreen.xib */; };
+		285A6D431A9DC79700001041 /* Paws_For_PawsperityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A6D421A9DC79700001041 /* Paws_For_PawsperityTests.m */; };
+		288794611A9DCB2900884D3A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143C2CDE182058B900DFCD05 /* FacebookSDK.framework */; };
+		288794621A9DCB2900884D3A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143C2CDC18203DBB00DFCD05 /* Parse.framework */; };
+		288794631A9DCB2900884D3A /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7BD16FD2B7D003CA3F7 /* libsqlite3.0.dylib */; };
+		288794641A9DCB2900884D3A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B716FD2B0F003CA3F7 /* Accounts.framework */; };
+		288794651A9DCB2900884D3A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B816FD2B0F003CA3F7 /* AdSupport.framework */; };
+		288794661A9DCB2900884D3A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B916FD2B0F003CA3F7 /* Social.framework */; };
+		288794671A9DCB2900884D3A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B316FD2ABC003CA3F7 /* CoreLocation.framework */; };
+		288794681A9DCB2900884D3A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B416FD2ABC003CA3F7 /* StoreKit.framework */; };
+		288794691A9DCB2900884D3A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EBD158AAF7E00A17D8A /* AudioToolbox.framework */; };
+		2887946A1A9DCB2900884D3A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EBE158AAF7E00A17D8A /* CFNetwork.framework */; };
+		2887946B1A9DCB2900884D3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EAA158AAE0F00A17D8A /* CoreGraphics.framework */; };
+		2887946C1A9DCB2900884D3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EA8158AAE0F00A17D8A /* Foundation.framework */; };
+		2887946D1A9DCB2900884D3A /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EBF158AAF7E00A17D8A /* libz.1.1.3.dylib */; };
+		2887946E1A9DCB2900884D3A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EC0158AAF7E00A17D8A /* MobileCoreServices.framework */; };
+		2887946F1A9DCB2900884D3A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EC1158AAF7E00A17D8A /* Security.framework */; };
+		288794701A9DCB2900884D3A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EC2158AAF7E00A17D8A /* SystemConfiguration.framework */; };
+		288794711A9DCB2900884D3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EA6158AAE0F00A17D8A /* UIKit.framework */; };
+		288794721A9DCB2900884D3A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EC9158AB00E00A17D8A /* QuartzCore.framework */; };
 		74366EA7158AAE0F00A17D8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EA6158AAE0F00A17D8A /* UIKit.framework */; };
 		74366EA9158AAE0F00A17D8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EA8158AAE0F00A17D8A /* Foundation.framework */; };
 		74366EAB158AAE1000A17D8A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EAA158AAE0F00A17D8A /* CoreGraphics.framework */; };
@@ -56,9 +82,40 @@
 		C4FD613817286ACD00F61563 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4FD613717286ACD00F61563 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		285A6D3D1A9DC79700001041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74366E99158AAE0F00A17D8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 285A6D201A9DC79700001041;
+			remoteInfo = "Paws For Pawsperity";
+		};
+		285A6D4A1A9DC79C00001041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74366E99158AAE0F00A17D8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74366EA1158AAE0F00A17D8A;
+			remoteInfo = LogInAndSignUpDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		143C2CDC18203DBB00DFCD05 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		143C2CDE182058B900DFCD05 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		285A6D211A9DC79700001041 /* Paws For Pawsperity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paws For Pawsperity.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		285A6D241A9DC79700001041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		285A6D251A9DC79700001041 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		285A6D271A9DC79700001041 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		285A6D281A9DC79700001041 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		285A6D2B1A9DC79700001041 /* Paws_For_Pawsperity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Paws_For_Pawsperity.xcdatamodel; sourceTree = "<group>"; };
+		285A6D2D1A9DC79700001041 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		285A6D2E1A9DC79700001041 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		285A6D311A9DC79700001041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		285A6D331A9DC79700001041 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		285A6D361A9DC79700001041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		285A6D3C1A9DC79700001041 /* Paws For PawsperityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paws For PawsperityTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		285A6D411A9DC79700001041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		285A6D421A9DC79700001041 /* Paws_For_PawsperityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Paws_For_PawsperityTests.m; sourceTree = "<group>"; };
 		74366EA2158AAE0F00A17D8A /* LogInAndSignUpDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogInAndSignUpDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74366EA6158AAE0F00A17D8A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74366EA8158AAE0F00A17D8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +174,38 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		285A6D1E1A9DC79700001041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				288794611A9DCB2900884D3A /* FacebookSDK.framework in Frameworks */,
+				288794621A9DCB2900884D3A /* Parse.framework in Frameworks */,
+				288794631A9DCB2900884D3A /* libsqlite3.0.dylib in Frameworks */,
+				288794641A9DCB2900884D3A /* Accounts.framework in Frameworks */,
+				288794651A9DCB2900884D3A /* AdSupport.framework in Frameworks */,
+				288794661A9DCB2900884D3A /* Social.framework in Frameworks */,
+				288794671A9DCB2900884D3A /* CoreLocation.framework in Frameworks */,
+				288794681A9DCB2900884D3A /* StoreKit.framework in Frameworks */,
+				288794691A9DCB2900884D3A /* AudioToolbox.framework in Frameworks */,
+				2887946A1A9DCB2900884D3A /* CFNetwork.framework in Frameworks */,
+				2887946B1A9DCB2900884D3A /* CoreGraphics.framework in Frameworks */,
+				2887946C1A9DCB2900884D3A /* Foundation.framework in Frameworks */,
+				2887946D1A9DCB2900884D3A /* libz.1.1.3.dylib in Frameworks */,
+				2887946E1A9DCB2900884D3A /* MobileCoreServices.framework in Frameworks */,
+				2887946F1A9DCB2900884D3A /* Security.framework in Frameworks */,
+				288794701A9DCB2900884D3A /* SystemConfiguration.framework in Frameworks */,
+				288794711A9DCB2900884D3A /* UIKit.framework in Frameworks */,
+				288794721A9DCB2900884D3A /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		285A6D391A9DC79700001041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74366E9F158AAE0F00A17D8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +234,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		285A6D221A9DC79700001041 /* Paws For Pawsperity */ = {
+			isa = PBXGroup;
+			children = (
+				285A6D271A9DC79700001041 /* AppDelegate.h */,
+				285A6D281A9DC79700001041 /* AppDelegate.m */,
+				285A6D2D1A9DC79700001041 /* ViewController.h */,
+				285A6D2E1A9DC79700001041 /* ViewController.m */,
+				285A6D301A9DC79700001041 /* Main.storyboard */,
+				285A6D331A9DC79700001041 /* Images.xcassets */,
+				285A6D351A9DC79700001041 /* LaunchScreen.xib */,
+				285A6D2A1A9DC79700001041 /* Paws_For_Pawsperity.xcdatamodeld */,
+				285A6D231A9DC79700001041 /* Supporting Files */,
+			);
+			path = "Paws For Pawsperity";
+			sourceTree = "<group>";
+		};
+		285A6D231A9DC79700001041 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				285A6D241A9DC79700001041 /* Info.plist */,
+				285A6D251A9DC79700001041 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		285A6D3F1A9DC79700001041 /* Paws For PawsperityTests */ = {
+			isa = PBXGroup;
+			children = (
+				285A6D421A9DC79700001041 /* Paws_For_PawsperityTests.m */,
+				285A6D401A9DC79700001041 /* Supporting Files */,
+			);
+			path = "Paws For PawsperityTests";
+			sourceTree = "<group>";
+		};
+		285A6D401A9DC79700001041 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				285A6D411A9DC79700001041 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		741203C415900A3C00820BE9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +307,8 @@
 				74366EAC158AAE1000A17D8A /* LogInAndSignUpDemo */,
 				741203C415900A3C00820BE9 /* Assets */,
 				74366EAD158AAE1000A17D8A /* Supporting Files */,
+				285A6D221A9DC79700001041 /* Paws For Pawsperity */,
+				285A6D3F1A9DC79700001041 /* Paws For PawsperityTests */,
 				74366EA5158AAE0F00A17D8A /* Frameworks */,
 				74366EA3158AAE0F00A17D8A /* Products */,
 			);
@@ -185,6 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				74366EA2158AAE0F00A17D8A /* LogInAndSignUpDemo.app */,
+				285A6D211A9DC79700001041 /* Paws For Pawsperity.app */,
+				285A6D3C1A9DC79700001041 /* Paws For PawsperityTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,6 +412,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		285A6D201A9DC79700001041 /* Paws For Pawsperity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 285A6D441A9DC79700001041 /* Build configuration list for PBXNativeTarget "Paws For Pawsperity" */;
+			buildPhases = (
+				285A6D1D1A9DC79700001041 /* Sources */,
+				285A6D1E1A9DC79700001041 /* Frameworks */,
+				285A6D1F1A9DC79700001041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Paws For Pawsperity";
+			productName = "Paws For Pawsperity";
+			productReference = 285A6D211A9DC79700001041 /* Paws For Pawsperity.app */;
+			productType = "com.apple.product-type.application";
+		};
+		285A6D3B1A9DC79700001041 /* Paws For PawsperityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 285A6D471A9DC79700001041 /* Build configuration list for PBXNativeTarget "Paws For PawsperityTests" */;
+			buildPhases = (
+				285A6D381A9DC79700001041 /* Sources */,
+				285A6D391A9DC79700001041 /* Frameworks */,
+				285A6D3A1A9DC79700001041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				285A6D3E1A9DC79700001041 /* PBXTargetDependency */,
+				285A6D4B1A9DC79C00001041 /* PBXTargetDependency */,
+			);
+			name = "Paws For PawsperityTests";
+			productName = "Paws For PawsperityTests";
+			productReference = 285A6D3C1A9DC79700001041 /* Paws For PawsperityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		74366EA1158AAE0F00A17D8A /* LogInAndSignUpDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74366EBA158AAE1000A17D8A /* Build configuration list for PBXNativeTarget "LogInAndSignUpDemo" */;
@@ -301,6 +472,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					285A6D201A9DC79700001041 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = D6SYSZQ5Q4;
+					};
+					285A6D3B1A9DC79700001041 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 285A6D201A9DC79700001041;
+					};
+					74366EA1158AAE0F00A17D8A = {
+						DevelopmentTeam = D6SYSZQ5Q4;
+					};
+				};
 			};
 			buildConfigurationList = 74366E9C158AAE0F00A17D8A /* Build configuration list for PBXProject "LogInAndSignUpDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -308,6 +492,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 74366E97158AAE0F00A17D8A;
 			productRefGroup = 74366EA3158AAE0F00A17D8A /* Products */;
@@ -315,11 +500,30 @@
 			projectRoot = "";
 			targets = (
 				74366EA1158AAE0F00A17D8A /* LogInAndSignUpDemo */,
+				285A6D201A9DC79700001041 /* Paws For Pawsperity */,
+				285A6D3B1A9DC79700001041 /* Paws For PawsperityTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		285A6D1F1A9DC79700001041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285A6D321A9DC79700001041 /* Main.storyboard in Resources */,
+				285A6D371A9DC79700001041 /* LaunchScreen.xib in Resources */,
+				285A6D341A9DC79700001041 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		285A6D3A1A9DC79700001041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74366EA0158AAE0F00A17D8A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +555,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		285A6D1D1A9DC79700001041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285A6D291A9DC79700001041 /* AppDelegate.m in Sources */,
+				285A6D2C1A9DC79700001041 /* Paws_For_Pawsperity.xcdatamodeld in Sources */,
+				285A6D2F1A9DC79700001041 /* ViewController.m in Sources */,
+				285A6D261A9DC79700001041 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		285A6D381A9DC79700001041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285A6D431A9DC79700001041 /* Paws_For_PawsperityTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74366E9E158AAE0F00A17D8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,7 +591,36 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		285A6D3E1A9DC79700001041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 285A6D201A9DC79700001041 /* Paws For Pawsperity */;
+			targetProxy = 285A6D3D1A9DC79700001041 /* PBXContainerItemProxy */;
+		};
+		285A6D4B1A9DC79C00001041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74366EA1158AAE0F00A17D8A /* LogInAndSignUpDemo */;
+			targetProxy = 285A6D4A1A9DC79C00001041 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		285A6D301A9DC79700001041 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				285A6D311A9DC79700001041 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		285A6D351A9DC79700001041 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				285A6D361A9DC79700001041 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
 		74366EAF158AAE1000A17D8A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -380,6 +632,112 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		285A6D451A9DC79700001041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Paws For Pawsperity/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		285A6D461A9DC79700001041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Paws For Pawsperity/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		285A6D481A9DC79700001041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Paws For PawsperityTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paws For Pawsperity.app/Paws For Pawsperity";
+			};
+			name = Debug;
+		};
+		285A6D491A9DC79700001041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Paws For PawsperityTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paws For Pawsperity.app/Paws For Pawsperity";
+			};
+			name = Release;
+		};
 		74366EB8158AAE1000A17D8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -449,6 +807,8 @@
 		74366EBB158AAE1000A17D8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -457,7 +817,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LogInAndSignUpDemo/LogInAndSignUpDemo-Prefix.pch";
 				INFOPLIST_FILE = "LogInAndSignUpDemo/LogInAndSignUpDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lsqlite3.0",
@@ -470,6 +830,8 @@
 		74366EBC158AAE1000A17D8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -478,7 +840,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LogInAndSignUpDemo/LogInAndSignUpDemo-Prefix.pch";
 				INFOPLIST_FILE = "LogInAndSignUpDemo/LogInAndSignUpDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lsqlite3.0",
@@ -491,6 +853,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		285A6D441A9DC79700001041 /* Build configuration list for PBXNativeTarget "Paws For Pawsperity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				285A6D451A9DC79700001041 /* Debug */,
+				285A6D461A9DC79700001041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		285A6D471A9DC79700001041 /* Build configuration list for PBXNativeTarget "Paws For PawsperityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				285A6D481A9DC79700001041 /* Debug */,
+				285A6D491A9DC79700001041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		74366E9C158AAE0F00A17D8A /* Build configuration list for PBXProject "LogInAndSignUpDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -510,6 +890,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		285A6D2A1A9DC79700001041 /* Paws_For_Pawsperity.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				285A6D2B1A9DC79700001041 /* Paws_For_Pawsperity.xcdatamodel */,
+			);
+			currentVersion = 285A6D2B1A9DC79700001041 /* Paws_For_Pawsperity.xcdatamodel */;
+			path = Paws_For_Pawsperity.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 74366E99158AAE0F00A17D8A /* Project object */;
 }
